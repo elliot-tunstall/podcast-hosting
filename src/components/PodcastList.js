@@ -1,38 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './PodcastList.css';
+import { podcasts } from '../data/podcastData';
+import { tags } from '../data/websiteConfig';
 
-const podcasts = [
-  {
-    id: 1,
-    episodeNumber: 5,
-    date: "9.20.2022",
-    image: "https://cdn.prod.website-files.com/633b4f6eba6a6237756cd0fc/633b60c6dd6a1389cccb642b_Pd5.jpg",
-    tag: "Design",
-    tagColor: "hsla(37.5, 78.57%, 78.04%, 1.00)",
-    title: "Good design is made from coffee",
-    description: "Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Suspendisse eu ligula. Nunc nec neque. Praesent ut ligula non mi varius sagittis. Aliquam erat volutpat.",
-    guestImage: "https://cdn.prod.website-files.com/633b4f6eba6a6237756cd0fc/633bf4c359b53875c2406d3e_ppl5.jpg",
-    guestName: "Isaiah Fischer"
-  },
-  // Add more podcast episodes here...
-];
+function PodcastList({ limit = Infinity, selectedTag = null, sortBy = 'date' }) {
+  const filteredAndSortedPodcasts = podcasts
+    .filter(podcast => !selectedTag || podcast.tags.includes(selectedTag)) // Filter by selectedTag
+    .sort((a, b) => {
+      if (sortBy === 'date') return new Date(b.date) - new Date(a.date);
+      if (sortBy === 'episodeNumber') return b.episodeNumber - a.episodeNumber;
+      return 0;
+    })
+    .slice(0, limit);
 
-function PodcastList() {
   return (
-    <div className="section black bottom-40">
+    <div className="section">
       <div className="main-container">
         <div className="center-content">
           <div className="limit-920">
             <div className="w-dyn-list">
               <div role="list" className="podcasts-collection-list w-dyn-items">
-                {podcasts.map(podcast => (
+                {filteredAndSortedPodcasts.map(podcast => (
                   <div key={podcast.id} role="listitem" className="podcast-item w-dyn-item">
                     <Link to={`/podcast/${podcast.id}`} className="podcast-link-block w-inline-block">
                       <div className="podcast-item-left">
                         <div className="episode-number-wrap">
-                          <div className="episode-number">EP</div>
-                          <div className="episode-number">{podcast.episodeNumber}</div>
+                          <div className="episode-number">EP {podcast.episodeNumber}</div>
                         </div>
                         <div className="episode-date">{podcast.date}</div>
                       </div>
@@ -41,8 +35,12 @@ function PodcastList() {
                         <div className="overlay-image-podcast"></div>
                       </div>
                       <div className="episode-right-wrap">
-                        <div className="tag" style={{backgroundColor: podcast.tagColor}}>
-                          <div>{podcast.tag}</div>
+                        <div className='tags-wrap'>
+                          {podcast.tags.map((tag, index) => (
+                          <div key={index} className="tag" style={{backgroundColor: getTagColor(tag)}}>
+                            <div>{tag}</div>
+                          </div>
+                          ))}
                         </div>
                         <div className="podcast-overview-title">{podcast.title}</div>
                         <p className="paragraph-medium">{podcast.description}</p>
@@ -65,3 +63,7 @@ function PodcastList() {
 }
 
 export default PodcastList;
+
+function getTagColor(tag) {
+  return tags[tag];
+}
