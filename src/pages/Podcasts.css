@@ -1,14 +1,15 @@
-.tag {
-  display: inline-block;
-  width: 70px;
-  margin: 0 5px;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
+.podcasts {
+  .tag {
+    display: inline-block;
+    width: 70px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
 
   .tag-line {
     padding-top: 10px;
@@ -17,7 +18,13 @@
     justify-content: center;
   }
 
-.tag:hover {
-  transform: translateX(-2px);
-  transition: transform 0.3s ease;
+  .tag:hover {
+    transform: translateX(-2px);
+    transition: transform 0.3s ease;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }

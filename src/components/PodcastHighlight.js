@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './PodcastList.css';
+import './PodcastHighlight.css';
 import { podcasts } from '../data/podcastData';
 import { tags } from '../data/websiteConfig';
 
-function PodcastList({ limit = Infinity, selectedTag = null, sortBy = 'date' }) {
+function PodcastHighlight({ limit = Infinity, selectedTag = null, sortBy = 'date' }) {
   const filteredAndSortedPodcasts = podcasts
     .filter(podcast => !selectedTag || podcast.tags.includes(selectedTag)) // Filter by selectedTag
     .sort((a, b) => {
@@ -15,7 +15,7 @@ function PodcastList({ limit = Infinity, selectedTag = null, sortBy = 'date' }) 
     .slice(0, limit);
 
   return (
-    <div className='podcast-list'>
+    <div className='podcast-highlight'>
       <div className='section container'>
         <div className='media-flex'>
           {filteredAndSortedPodcasts.map((podcast, index) => (
@@ -64,7 +64,7 @@ function PodcastList({ limit = Infinity, selectedTag = null, sortBy = 'date' }) 
     );
   };
 
-  export default PodcastList;
+  export default PodcastHighlight;
 
   function getTagColor(tag) {
     return tags[tag];

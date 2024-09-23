@@ -1,5 +1,33 @@
+.home{
+
+  .welcome-animated {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio 16:9 (height/width * 100) */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    /* min-height: 100%; */
+    width: 100%;
+    height: auto;
+    z-index: -1; /* Send the video behind other content */
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover;
+  }
+  .welcome-animated img {
+    min-width: 500px; /* Set the desired width */
+    width: 500px;
+    height: 400px; /* Set the same height for a square */
+  }
+}
+
 .where-to-listen {
   margin: 0;
   border-top: 0px;
-  padding-top: 100px;
+  padding-top: 0px;
 }

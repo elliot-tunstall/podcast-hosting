@@ -12,7 +12,7 @@ h1{
   padding: 40px;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
 }
 
 .primary-background{
@@ -54,7 +54,7 @@ h2 {
 }
 
 body {
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #ffffff;
@@ -66,8 +66,11 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  
+  padding: 0 40px;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .black-section {
@@ -103,7 +106,8 @@ body {
   --secondary-color: #666;
   /* --primary-background-color: #f5f4f1; */
   --primary-background-color: white;
-  --secondary-background-color: #B6D0E2;
+  /* --secondary-background-color: #B6D0E2; */
+  --secondary-background-color: #f2f9ff;
   --text-color: #333;
   --text-color-secondary: #666;
   --accent-color: #A7C7E7;
@@ -114,4 +118,12 @@ body {
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .section{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
 }
