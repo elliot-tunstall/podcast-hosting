@@ -15,6 +15,13 @@
     max-width: 1200px; 
     margin: 0 auto; 
   }
+
+  .center-element {
+    display: flex;
+    align-items: left;
+    height: 60px; /* Set a height for the container */
+    line-height: 60px;
+  }
   
   .logo {
     font-size: 1.5rem;
