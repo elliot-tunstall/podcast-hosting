@@ -44,6 +44,7 @@ export let podcasts = [
     description: "In this episode of the Digital Pathology Podcast, I sit down with Danielle Brown, the General Manager at Charles River Laboratories and an expert in toxicologic pathology. Danielle and I explore the evolving role of image analysis in preclinical studies, diving into how this technology enhances—rather than replaces—the expertise of pathologists.",
     guestImage: 'https://digitalpathologyplace.com/wp-content/uploads/2024/06/Digital-Pathology-Place.jpg',
     guestName: 'Danielle Brown',
-    embedUrl: "https://open.spotify.com/embed/episode/5tCORpqHCV1rXny99sTXNW?utm_source=generator"
+    embedUrl: "https://open.spotify.com/embed/episode/5tCORpqHCV1rXny99sTXNW?utm_source=generator",
+    transcription: "We discuss the challenges and benefits of integrating image analysis into preclinical research, particularly in a GLP-compliant environment, and the importance of collaboration between pathologists and image analysis scientists. Danielle also shares insights from her extensive experience in managing image analysis teams and how Charles River Laboratories ensures regulatory compliance in their processes."
   }
 ];

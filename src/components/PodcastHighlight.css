@@ -256,6 +256,9 @@
       -webkit-line-clamp: 3; /* Limit to 3 lines */
       line-clamp: 3; /* Standard property for compatibility */
     }
+    .content-foot {
+      margin-left: 15px;
+    }
     .card .tag {
       width: 50px;
       padding: 5px 5px;

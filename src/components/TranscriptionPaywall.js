@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Transcription from './Transcription';
 
 function TranscriptionPaywall({ podcast }) {
   const [isPaid, setIsPaid] = useState(false);
@@ -21,7 +22,7 @@ function TranscriptionPaywall({ podcast }) {
   return (
     <div className="transcription">
       <h3>Transcription</h3>
-      <p>{podcast.transcription}</p>
+      <Transcription podcast={podcast}/>
     </div>
   );
 }
