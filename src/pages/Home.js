@@ -24,7 +24,7 @@ function Home() {
       </section>
       <section className="section primary-background">
         <div className="container">
-          <h1 className="black">Latest episodes</h1>
+          <h1 className="black section">Latest episodes</h1>
         </div>
         <PodcastHighlight limit={5} />
       </section>

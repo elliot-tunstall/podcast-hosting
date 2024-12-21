@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import PodcastPage from './pages/PodcastPage';
 import Podcasts from './pages/Podcasts';
+import Admin from './pages/Admin';
+import SignIn from './components/sign-in-side/SignInSide.js'
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/podcast/:id" element={<PodcastPage />} />
             <Route path="/podcasts" element={<Podcasts />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         <Footer />
       </div>

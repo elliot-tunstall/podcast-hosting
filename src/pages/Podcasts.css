@@ -1,4 +1,7 @@
 .podcasts {
+  /* .section {
+    padding: 40px;
+  } */
   .tag {
     display: inline-block;
     width: 70px;
@@ -13,6 +16,7 @@
 
   .tag-line {
     padding-top: 10px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -12,34 +12,36 @@ function Podcasts() {
   }
 
   return (
-    <div className="section podcasts">
+    <div className='section'>
       <h2>Explore podcasts </h2>
-      <div className='tag-line'>
-        <div className="tag" 
-          style={{ 
-            border: '1.5px solid black', 
-            backgroundColor: selectedTag === null ? 'black' : 'transparent', // Set background color for active tag
-            color: selectedTag === null ? 'white' : '#333' // Change text color for active tag
-            }} 
-          onClick={() => handleTagClick(null)}>
-          <div>Any</div>
-        </div>
-
-        {Object.keys(tags).map((tag, index) => (
-          <div key={index} 
-            className={`tag ${selectedTag === tag ? 'active' : ''}`} // Apply active class conditionally
-            style={{
-              border: `1.5px solid ${tags[tag]}`, // Set border color based on tag
-              backgroundColor: selectedTag === tag ? tags[tag] : 'transparent', // Set background color for active tag
-              color: selectedTag === tag ? 'white' : '#333' // Change text color for active tag
-          }}
-          onClick={() => handleTagClick(tag)} // Pass the tag name to the click handler
-          >
-            <div>{tag}</div>
+      <div className="podcasts">
+        <div className='tag-line'>
+          <div className="tag" 
+            style={{ 
+              border: '1.5px solid black', 
+              backgroundColor: selectedTag === null ? 'black' : 'transparent', // Set background color for active tag
+              color: selectedTag === null ? 'white' : '#333' // Change text color for active tag
+              }} 
+            onClick={() => handleTagClick(null)}>
+            <div>Any</div>
           </div>
-        ))}
+
+          {Object.keys(tags).map((tag, index) => (
+            <div key={index} 
+              className={`tag ${selectedTag === tag ? 'active' : ''}`} // Apply active class conditionally
+              style={{
+                border: `1.5px solid ${tags[tag]}`, // Set border color based on tag
+                backgroundColor: selectedTag === tag ? tags[tag] : 'transparent', // Set background color for active tag
+                color: selectedTag === tag ? 'white' : '#333' // Change text color for active tag
+            }}
+            onClick={() => handleTagClick(tag)} // Pass the tag name to the click handler
+            >
+              <div>{tag}</div>
+            </div>
+          ))}
+        </div>
+        <PodcastList selectedTag={selectedTag} /> {/* Pass the selected tag to PodcastList */}
       </div>
-      <PodcastList selectedTag={selectedTag} /> {/* Pass the selected tag to PodcastList */}
     </div>
   );
 }
