@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/podcast-hosting/static/css/main.2c04e729.css",
+    "main.js": "/podcast-hosting/static/js/main.9ec1d02c.js",
+    "static/js/453.abd043b6.chunk.js": "/podcast-hosting/static/js/453.abd043b6.chunk.js",
+    "static/media/home2.mp4": "/podcast-hosting/static/media/home2.fa4941b9e28a47bb868e.mp4",
+    "static/media/episodeWaves.webm": "/podcast-hosting/static/media/episodeWaves.42da498a8f754c6596f7.webm",
+    "static/media/microphoneAnimation.webm": "/podcast-hosting/static/media/microphoneAnimation.d6a539bc9e1041004cbf.webm",
+    "static/media/spotify-podcasts-logo-3.webp": "/podcast-hosting/static/media/spotify-podcasts-logo-3.d9821bee3ad76cf4adda.webp",
+    "static/media/apple-podcasts-logo-3.webp": "/podcast-hosting/static/media/apple-podcasts-logo-3.7dc09dcb1032466f8de0.webp",
+    "index.html": "/podcast-hosting/index.html",
+    "main.2c04e729.css.map": "/podcast-hosting/static/css/main.2c04e729.css.map",
+    "main.9ec1d02c.js.map": "/podcast-hosting/static/js/main.9ec1d02c.js.map",
+    "453.abd043b6.chunk.js.map": "/podcast-hosting/static/js/453.abd043b6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c04e729.css",
+    "static/js/main.9ec1d02c.js"
+  ]
+}
